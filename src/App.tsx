@@ -50,9 +50,9 @@ const projects = [
       "AI-assisted cloud security and energy-optimisation dashboard for construction teams, built for the Hilti track at IMAGINEHACK 2026.",
     tech: ["React", "TypeScript", "FastAPI", "SQLite", "Python", "Ollama"],
     highlights: [
-      "Deterministic scanner for simulated cloud security and energy issues",
-      "LLM explains alerts but never executes actions",
-      "Audit logs, alert flows and human approval logic",
+      "Implemented 20+ deterministic scanning rules for simulated cloud security and energy-waste detection.",
+      "Reduced repeated alert noise using deduplication for unresolved issues.",
+      "Designed a safety-first AI workflow where the LLM explains alerts but never executes actions.",
     ],
     github: "https://github.com/suchirrrr/eureguard",
     demo: "",
@@ -65,7 +65,11 @@ const projects = [
     description:
       "Offline document question-answering assistant using RAG, embeddings, semantic search and local AI workflows.",
     tech: ["Python", "Streamlit", "MiniLM", "Embeddings", "Semantic Search"],
-    highlights: ["PDF upload workflow", "Text chunking", "Semantic retrieval"],
+    highlights: [
+      "Built a complete local RAG pipeline from document upload to semantic retrieval and AI response generation.",
+      "Reduced manual document searching by allowing users to query uploaded files directly.",
+      "Implemented chunking, embeddings and retrieval workflows for document-grounded answers.",
+    ],
     github: "https://github.com/suchirrrr/codeterinity-rag-assistant",
     demo: "",
     image: "/projects/rag-assistant.png",
@@ -77,9 +81,9 @@ const projects = [
       "Java object-oriented text-based game built with UML-driven design, actors, maps, actions, behaviours and interactive mechanics.",
     tech: ["Java", "OOP", "UML", "Software Design"],
     highlights: [
-      "Modular actor/action/behaviour architecture",
-      "Team-based Java software design project",
-      "UML class and sequence modelling",
+      "Built a modular Java game system using actors, maps, actions, behaviours and interactive mechanics.",
+      "Used UML class and sequence diagrams to plan object relationships and game interactions.",
+      "Improved extensibility by separating game logic into reusable object-oriented components.",
     ],
     github: "https://github.com/suchirrrr/eclipse-nebula-java-game",
     demo: "",
@@ -92,9 +96,9 @@ const projects = [
       "Functional reactive programming browser game inspired by Flappy Bird, built with TypeScript, RxJS and SVG.",
     tech: ["TypeScript", "RxJS", "SVG", "Functional Programming"],
     highlights: [
-      "Observable stream-based gameplay",
-      "Gravity, collision detection, scoring and lives",
-      "Browser-based SVG game rendering",
+      "Built a browser-based game using RxJS Observable streams and functional reactive programming.",
+      "Implemented core game systems including gravity, collision detection, scoring, lives and restart flow.",
+      "Applied event-driven state management to handle real-time gameplay interactions.",
     ],
     github: "https://github.com/suchirrrr/flappy-birb-rxjs",
     demo: "",
@@ -340,14 +344,17 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
             <span className="mini-pill" key={tech}>{tech}</span>
           ))}
         </div>
-        <ul className="space-y-3 text-sm text-slate-300">
+        <div>
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">Technical Highlights</p>
+          <ul className="space-y-3 text-sm text-slate-300">
           {project.highlights.map((item) => (
             <li key={item} className="flex gap-3">
               <ShieldCheck className="mt-0.5 shrink-0 text-cyan-300" size={17} />
               <span>{item}</span>
             </li>
           ))}
-        </ul>
+          </ul>
+        </div>
         <div className="flex flex-wrap gap-3">
           <a className="secondary-button" href={project.github} target="_blank" rel="noreferrer">
             <Github size={18} />

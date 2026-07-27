@@ -423,7 +423,7 @@ function EducationLeadership() {
       <SectionHeading
         eyebrow="Education & Leadership"
         title="Technical foundation with real student leadership."
-        copy="The portfolio should show code, but also signal that you can communicate, organise and work with people."
+        copy="A mix of computer science coursework, technical club leadership, industry outreach and student mentorship."
       />
       <div className="mt-10 grid gap-6 lg:grid-cols-[0.82fr_1.18fr]">
         <div className="glass-panel spotlight-panel">

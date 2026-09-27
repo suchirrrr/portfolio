@@ -155,24 +155,47 @@ const projects = [
 
 const experience = [
   {
-    role: "Research Intern",
-    org: "Monash IT Student Research Scheme 2025",
-    copy: "Worked on forecasting models, intelligent systems and sustainable energy analytics using Python-based data workflows.",
+    role: "CEO & Founder", org: "CodeTerinity",
+    dates: "May 2025 – Present", location: "Remote",
+    copy: "Lead a Python tutoring startup for beginners, shaping personalised one-to-one sessions, the tutoring model, learning content and student outreach.",
   },
   {
-    role: "Founder & Python Tutor",
-    org: "CodeTerinity",
-    copy: "Founded a beginner-focused Python tutoring initiative and designed personalised coding exercises.",
+    role: "Head of External Liaison", org: "Robogals Monash Malaysia",
+    dates: "Aug 2026 – Present", location: "Malaysia",
+    copy: "Manage external relationships with industry partners, sponsors, educational institutions and communities to support the organisation’s activities.",
+  },
+  {
+    role: "Head of Industrial Relations", org: "MIND ENGINE Expo",
+    dates: "Jan 2026 – Present", location: "Malaysia",
+    copy: "Lead industry outreach for collaborations, sponsorships, guest lectures and workshops, including proposal drafting and ongoing partnership coordination.",
+  },
+  {
+    role: "Head of Industrial Relations", org: "Monash University Malaysia Tech Club (MUMTEC)",
+    dates: "Nov 2024 – Present", location: "Malaysia",
+    copy: "Build industry partnerships and organise initiatives connecting students with engineering and technology professionals and opportunities.",
+  },
+  {
+    role: "Head of Industrial Relations", org: "Averis x Monash Hackathon 2026",
+    dates: "Jul 2026 – Sep 2026", location: "Malaysia",
+    copy: "Recruited and onboarded judges and mentors, coordinated stakeholder communication, and hosted the Averis team during the hackathon to support their interactions with participants.",
+  },
+  {
+    role: "Research Intern",
+    org: "Monash IT Student Research (iSR) Scheme 2025",
+    dates: "Nov 2025 – Feb 2026", location: "Malaysia",
+    copy: "Explored forecasting, data-driven modelling and intelligent systems for tropical building energy behaviour under Dr. Mirza Rayana Sanzana, working with open datasets and exploratory pipelines for sustainable energy analytics.",
+  },
+  {
+    role: "Global Intern",
+    org: "The Workstyle Revolution · TeaMWork Programme",
+    dates: "Jun 2025 – Jul 2025", location: "Remote",
+    copy: "Collaborated in a seven-person team from Monash and Warwick on inclusive work practices. Conducted user research and case study analysis, then designed and pitched the Workstyle Pioneers Campaign with outreach, social media and case study materials.",
   },
   {
     role: "Technical Intern",
     org: "Mechmet Engineers",
+    dates: "Nov 2024 – Jan 2025", location: "Coimbatore, India",
     copy: "Practised Python, Pandas, NumPy, data structures and introductory machine learning through hands-on data tasks.",
-  },
-  {
-    role: "Marketing & Strategy Intern",
-    org: "TeaMWork Global Internship Programme",
-    copy: "Collaborated in a multicultural team on research, strategy and campaign design.",
   },
 ];
 
@@ -184,7 +207,7 @@ const leadership = [
     icon: Handshake,
   },
   {
-    title: "Industrial Outreach Lead",
+    title: "Head of Industrial Relations",
     org: "MIND ENGINE Expo 2026",
     copy: "Leading company outreach for sponsorships, guest lectures, workshops, booths and student-industry collaboration.",
     icon: Award,
@@ -441,7 +464,7 @@ function ProjectVisual({ project }: { project: (typeof projects)[number] }) {
 function Experience() {
   return (
     <section id="experience" className="mx-auto max-w-6xl px-5 py-20">
-      <SectionHeading eyebrow="Experience" title="A focused path through research, teaching and technical work." />
+      <SectionHeading eyebrow="Experience" title="Research, teaching and industry leadership." />
       <div className="relative mt-12 space-y-6 before:absolute before:left-4 before:top-2 before:h-full before:w-px before:bg-gradient-to-b before:from-sky-300 before:via-fuchsia-400 before:to-transparent md:before:left-1/2">
         {experience.map((item, index) => (
           <motion.div
@@ -449,12 +472,13 @@ function Experience() {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.35 }}
-            className={`relative grid gap-5 pl-12 md:grid-cols-2 md:pl-0 ${index % 2 ? "md:[&>div]:col-start-2" : ""}`}
+            className={`relative grid gap-5 pl-12 md:grid-cols-2 md:gap-12 md:pl-0 ${index % 2 ? "md:[&>div]:col-start-2" : ""}`}
           >
             <span className="absolute left-2 top-3 h-4 w-4 rounded-full border border-cyan-200 bg-ink shadow-[0_0_24px_rgba(34,211,238,0.8)] md:left-1/2 md:-translate-x-1/2" />
             <div className="glass-panel">
               <p className="text-sm uppercase tracking-[0.2em] text-sky-300">{item.role}</p>
               <h3 className="mt-2 font-display text-xl font-semibold text-white">{item.org}</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-400">{item.dates} · {item.location}</p>
               <p className="mt-3 leading-7 text-slate-300">{item.copy}</p>
             </div>
           </motion.div>

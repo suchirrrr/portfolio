@@ -5,7 +5,6 @@ import {
   BrainCircuit,
   CloudCog,
   Code2,
-  Download,
   GraduationCap,
   Github,
   Handshake,
@@ -290,9 +289,9 @@ function Hero() {
         </div>
         <div className="mt-9 flex flex-wrap gap-3">
           <a className="primary-button" href="#projects">View Projects</a>
-          <a className="secondary-button" href="/resume.pdf" download>
-            <Download size={18} />
-            Download Resume
+          <a className="secondary-button" href="https://drive.google.com/file/d/1uEK7wdGo_tAsxr6_j_uxS5KuAFPVXMHO/view?usp=sharing" target="_blank" rel="noreferrer">
+            <ArrowUpRight size={18} />
+            View Resume
           </a>
           <a className="secondary-button" href={links.github} target="_blank" rel="noreferrer">
             <Github size={18} />
@@ -576,9 +575,9 @@ function Contact() {
             <Linkedin size={18} />
             LinkedIn
           </a>
-          <a className="secondary-button" href="/resume.pdf" download>
-            <Download size={18} />
-            Download Resume
+          <a className="secondary-button" href="https://drive.google.com/file/d/1uEK7wdGo_tAsxr6_j_uxS5KuAFPVXMHO/view?usp=sharing" target="_blank" rel="noreferrer">
+            <ArrowUpRight size={18} />
+            View Resume
           </a>
         </div>
       </div>

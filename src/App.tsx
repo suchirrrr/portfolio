@@ -46,51 +46,6 @@ const heroStats = [
 
 const projects = [
   {
-    title: "CareLog",
-    label: "Patient Records & Appointment Management | FIT1056",
-    description:
-      "Led a team building a Python and Streamlit healthcare prototype, contributing across patient records, clinical notes, appointments, prescriptions and feedback workflows.",
-    tech: ["Python", "Streamlit", "JSON", "pytest", "Role-Based Access"],
-    highlights: [
-      "Contributed across the interface, application services, domain logic and JSON repositories as team lead.",
-      "Implemented separate administrator, doctor, nurse and patient workflows with authentication and access checks.",
-      "Included PBKDF2 password hashing, session expiry, audit logging and unit, functional and security edge-case tests.",
-    ],
-    github: "https://github.com/suchirrrr/carelog",
-    demo: "",
-    image: "/projects/carelog-admin-patients.png",
-  },
-  {
-    title: "BNF2Haskell",
-    label: "Grammar Parser & Code Generator | FIT2102",
-    description:
-      "Built a modular BNF grammar parser and Haskell code generator using parser combinators, algebraic data types and pure functions, extending a supplied course scaffold.",
-    tech: ["Haskell", "Parser Combinators", "TypeScript", "RxJS"],
-    highlights: [
-      "Separated grammar parsing, validation, code generation and file saving into focused modules.",
-      "Added duplicate-rule, undefined-reference and left-recursion checks, plus float, Boolean and identifier macros.",
-      "Generated data/newtype declarations and applicative parsers, with a browser interface for inspecting output.",
-    ],
-    github: "https://github.com/suchirrrr/BNF2Haskell---Grammar-Parser-and-Code-Generator",
-    demo: "",
-    image: "/projects/haskell-overview.png",
-  },
-  {
-    title: "BRM Database",
-    label: "Relational & Document Databases | FIT2094",
-    description:
-      "Developed seven Oracle SQL and MongoDB scripts modelling transport quotations, jobs, employees and vehicle servicing, from relational constraints to nested JSON documents.",
-    tech: ["Oracle SQL", "MongoDB", "JSON", "Database Design"],
-    highlights: [
-      "Defined tables and integrity constraints, populated test data and implemented transaction-based updates.",
-      "Extended the schema for service management and wrote reports using joins, aggregation and subqueries.",
-      "Exported relational customer data as nested JSON and implemented MongoDB queries and updates.",
-    ],
-    github: "https://github.com/suchirrrr/BRM-Relational-Database-and-MongoDB-Project",
-    demo: "",
-    image: "/projects/brm-overview.png",
-  },
-  {
     title: "EureGuard",
     label: "AI Cloud Security & Energy Optimisation Dashboard",
     description:
@@ -150,6 +105,51 @@ const projects = [
     github: "https://github.com/suchirrrr/flappy-birb-rxjs",
     demo: "",
     image: "/projects/flappy-birb.png",
+  },
+  {
+    title: "BRM Database",
+    label: "Relational & Document Databases | FIT2094",
+    description:
+      "Developed seven Oracle SQL and MongoDB scripts modelling transport quotations, jobs, employees and vehicle servicing, from relational constraints to nested JSON documents.",
+    tech: ["Oracle SQL", "MongoDB", "JSON", "Database Design"],
+    highlights: [
+      "Defined tables and integrity constraints, populated test data and implemented transaction-based updates.",
+      "Extended the schema for service management and wrote reports using joins, aggregation and subqueries.",
+      "Exported relational customer data as nested JSON and implemented MongoDB queries and updates.",
+    ],
+    github: "https://github.com/suchirrrr/BRM-Relational-Database-and-MongoDB-Project",
+    demo: "",
+    image: "/projects/brm-overview.png",
+  },
+  {
+    title: "BNF2Haskell",
+    label: "Grammar Parser & Code Generator | FIT2102",
+    description:
+      "Built a modular BNF grammar parser and Haskell code generator using parser combinators, algebraic data types and pure functions, extending a supplied course scaffold.",
+    tech: ["Haskell", "Parser Combinators", "TypeScript", "RxJS"],
+    highlights: [
+      "Separated grammar parsing, validation, code generation and file saving into focused modules.",
+      "Added duplicate-rule, undefined-reference and left-recursion checks, plus float, Boolean and identifier macros.",
+      "Generated data/newtype declarations and applicative parsers, with a browser interface for inspecting output.",
+    ],
+    github: "https://github.com/suchirrrr/BNF2Haskell---Grammar-Parser-and-Code-Generator",
+    demo: "",
+    image: "/projects/haskell-overview.png",
+  },
+  {
+    title: "CareLog",
+    label: "Patient Records & Appointment Management | FIT1056",
+    description:
+      "Led a team building a Python and Streamlit healthcare prototype, contributing across patient records, clinical notes, appointments, prescriptions and feedback workflows.",
+    tech: ["Python", "Streamlit", "JSON", "pytest", "Role-Based Access"],
+    highlights: [
+      "Contributed across the interface, application services, domain logic and JSON repositories as team lead.",
+      "Implemented separate administrator, doctor, nurse and patient workflows with authentication and access checks.",
+      "Included PBKDF2 password hashing, session expiry, audit logging and unit, functional and security edge-case tests.",
+    ],
+    github: "https://github.com/suchirrrr/carelog",
+    demo: "",
+    image: "/projects/carelog-admin-patients.png",
   },
 ];
 

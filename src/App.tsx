@@ -155,19 +155,37 @@ const projects = [
 
 const experience = [
   {
-    role: "CEO & Founder", org: "CodeTerinity",
+    role: "Research Intern",
+    org: "Monash IT Student Research (iSR) Scheme 2025",
+    dates: "Nov 2025 - Feb 2026", location: "Malaysia",
+    copy: "Explored sustainable energy analytics through Python preprocessing, forecasting experiments and open datasets.",
+  },
+  {
+    role: "Founder and Python Tutor", org: "CodeTerinity",
     dates: "May 2025 – Present", location: "Remote",
-    copy: "Lead a Python tutoring startup for beginners, shaping personalised one-to-one sessions, the tutoring model, learning content and student outreach.",
+    copy: "Founded a tutoring initiative and designed personalised one-to-one Python lessons, exercises and learning pathways.",
+  },
+  {
+    role: "Technical Intern",
+    org: "Mechmet Engineers",
+    dates: "Nov 2024 - Jan 2025", location: "Coimbatore, India",
+    copy: "Completed practical Python, Pandas and NumPy tasks in data manipulation and introductory machine learning.",
+  },
+  {
+    role: "Marketing and Strategy Intern",
+    org: "The Workstyle Revolution · TeaMWork Programme",
+    dates: "Jun 2025 - Jul 2025", location: "Remote",
+    copy: "Collaborated internationally on user research, case studies and campaign strategy across technology and education.",
+  },
+  {
+    role: "Head of Industrial Relations", org: "MIND ENGINE Expo 2026",
+    dates: "Jan 2026 – Present", location: "Malaysia",
+    copy: "Lead industry outreach for collaborations, sponsorships, guest lectures and workshops, including proposal drafting and ongoing partnership coordination.",
   },
   {
     role: "Head of External Liaison", org: "Robogals Monash Malaysia",
     dates: "Aug 2026 – Present", location: "Malaysia",
     copy: "Manage external relationships with industry partners, sponsors, educational institutions and communities to support the organisation’s activities.",
-  },
-  {
-    role: "Head of Industrial Relations", org: "MIND ENGINE Expo",
-    dates: "Jan 2026 – Present", location: "Malaysia",
-    copy: "Lead industry outreach for collaborations, sponsorships, guest lectures and workshops, including proposal drafting and ongoing partnership coordination.",
   },
   {
     role: "Head of Industrial Relations", org: "Monash University Malaysia Tech Club (MUMTEC)",
@@ -178,24 +196,6 @@ const experience = [
     role: "Head of Industrial Relations", org: "Averis x Monash Hackathon 2026",
     dates: "Jul 2026 – Sep 2026", location: "Malaysia",
     copy: "Recruited and onboarded judges and mentors, coordinated stakeholder communication, and hosted the Averis team during the hackathon to support their interactions with participants.",
-  },
-  {
-    role: "Research Intern",
-    org: "Monash IT Student Research (iSR) Scheme 2025",
-    dates: "Nov 2025 – Feb 2026", location: "Malaysia",
-    copy: "Explored forecasting, data-driven modelling and intelligent systems for tropical building energy behaviour under Dr. Mirza Rayana Sanzana, working with open datasets and exploratory pipelines for sustainable energy analytics.",
-  },
-  {
-    role: "Global Intern",
-    org: "The Workstyle Revolution · TeaMWork Programme",
-    dates: "Jun 2025 – Jul 2025", location: "Remote",
-    copy: "Collaborated in a seven-person team from Monash and Warwick on inclusive work practices. Conducted user research and case study analysis, then designed and pitched the Workstyle Pioneers Campaign with outreach, social media and case study materials.",
-  },
-  {
-    role: "Technical Intern",
-    org: "Mechmet Engineers",
-    dates: "Nov 2024 – Jan 2025", location: "Coimbatore, India",
-    copy: "Practised Python, Pandas, NumPy, data structures and introductory machine learning through hands-on data tasks.",
   },
 ];
 
@@ -464,7 +464,7 @@ function ProjectVisual({ project }: { project: (typeof projects)[number] }) {
 function Experience() {
   return (
     <section id="experience" className="mx-auto max-w-6xl px-5 py-20">
-      <SectionHeading eyebrow="Experience" title="Research, teaching and industry leadership." />
+      <SectionHeading eyebrow="Experience" title="Internships, research and venture work." />
       <div className="relative mt-12 space-y-6 before:absolute before:left-4 before:top-2 before:h-full before:w-px before:bg-gradient-to-b before:from-sky-300 before:via-fuchsia-400 before:to-transparent md:before:left-1/2">
         {experience.map((item, index) => (
           <motion.div
@@ -493,8 +493,8 @@ function EducationLeadership() {
     <section className="mx-auto max-w-7xl px-5 py-20">
       <SectionHeading
         eyebrow="Education & Leadership"
-        title="Technical foundation with real student leadership."
-        copy="A mix of computer science coursework, technical club leadership, industry outreach and student mentorship."
+        title="Education and campus leadership."
+        copy="Computer science coursework plus selected roles in industry outreach, events and student mentorship."
       />
       <div className="mt-10 grid gap-6 lg:grid-cols-[0.82fr_1.18fr]">
         <div className="glass-panel spotlight-panel">

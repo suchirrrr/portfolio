@@ -279,30 +279,25 @@ function Navbar() {
 }
 
 function Hero() {
-  const terminalLines = [
-    "> scanning cloud resources...",
-    "> retrieving document context...",
-    "> building Java game systems...",
-    "> deploying portfolio...",
-  ];
+  const pinnedProjects = projects.slice(0, 4);
 
   return (
-    <section id="top" className="mx-auto grid min-h-[88vh] max-w-7xl items-center gap-12 px-5 py-20 lg:grid-cols-[1.05fr_0.95fr]">
+    <section id="top" className="hero-section mx-auto grid min-h-[88vh] max-w-7xl items-center gap-8 px-5 py-12 md:grid-cols-[0.84fr_1.16fr] lg:grid-cols-[0.9fr_1.1fr]">
       <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-sky-300/20 bg-sky-300/10 px-4 py-2 text-sm text-sky-100">
+        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm text-cyan-100">
           <Sparkles size={16} />
-          AI Systems & Software Portfolio
+          Software portfolio / AI systems / Monash CS
         </div>
-        <h1 className="font-display text-5xl font-bold leading-[1.04] text-white md:text-7xl">
-          Suchir Ganesh Jaiganesh
+        <h1 className="hero-title font-display text-5xl font-bold leading-[0.95] text-white md:text-5xl lg:text-7xl">
+          Suchir builds systems.
         </h1>
-        <p className="mt-4 bg-gradient-to-r from-sky-300 via-fuchsia-300 to-cyan-200 bg-clip-text font-display text-2xl font-semibold text-transparent md:text-4xl">
-          AI Systems & Software Developer
+        <p className="mt-5 max-w-2xl font-display text-2xl font-semibold leading-tight text-cyan-100 md:text-2xl lg:text-4xl">
+          AI tools, security dashboards, data systems and practical software.
         </p>
-        <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-          Computer Science student at Monash University Malaysia building AI tools, cloud security systems, RAG assistants and interactive software projects.
+        <p className="mt-5 max-w-2xl text-base leading-7 text-slate-300 lg:text-lg lg:leading-8">
+          I am Suchir Ganesh Jaiganesh, a Computer Science student at Monash University Malaysia building real projects across RAG, cloud security, databases, games and software engineering.
         </p>
-        <div className="mt-8 grid max-w-2xl gap-3 sm:grid-cols-3">
+        <div className="mt-7 grid max-w-2xl gap-3 sm:grid-cols-3 md:grid-cols-1 lg:grid-cols-3">
           {heroStats.map(([value, label]) => (
             <div className="metric-tile" key={label}>
               <p>{value}</p>
@@ -310,7 +305,7 @@ function Hero() {
             </div>
           ))}
         </div>
-        <div className="mt-9 flex flex-wrap gap-3">
+        <div className="mt-7 flex flex-wrap gap-3">
           <a className="primary-button" href="#projects">View Projects</a>
           <a className="secondary-button" href="https://drive.google.com/file/d/1uEK7wdGo_tAsxr6_j_uxS5KuAFPVXMHO/view?usp=sharing" target="_blank" rel="noreferrer">
             <ArrowUpRight size={18} />
@@ -330,34 +325,44 @@ function Hero() {
         initial={{ opacity: 0, scale: 0.94, y: 24 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ delay: 0.15, duration: 0.7 }}
-        className="terminal-card"
+        className="lab-window"
       >
-        <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
+        <div className="lab-topbar">
           <div className="flex gap-2">
-            <span className="h-3 w-3 rounded-full bg-rose-400" />
-            <span className="h-3 w-3 rounded-full bg-amber-300" />
-            <span className="h-3 w-3 rounded-full bg-emerald-300" />
+            <span />
+            <span />
+            <span />
           </div>
-          <span className="font-mono text-xs text-slate-400">suchir.dev/build</span>
+          <p>suchir.dev / project-lab</p>
         </div>
-        <div className="space-y-5 p-6 font-mono text-sm text-cyan-100 md:p-8">
-          <div className="terminal-scanline" />
-          {terminalLines.map((line, index) => (
-            <motion.p
-              key={line}
-              initial={{ opacity: 0, x: -12 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.55 + index * 0.2 }}
-            >
-              {line}
-            </motion.p>
-          ))}
-          <div className="mt-8 grid grid-cols-3 gap-3">
-            {["AI", "Cloud", "Systems"].map((item) => (
-              <div key={item} className="rounded-xl border border-white/10 bg-white/[0.04] p-4 text-center text-slate-200">
-                {item}
-              </div>
-            ))}
+        <div className="lab-command">
+          <span>suchir@portfolio</span>
+          <p>showcase --best-builds --proof-first</p>
+        </div>
+        <div className="lab-grid">
+          {pinnedProjects.map((project, index) => {
+            const image = "images" in project && project.images ? project.images[0] : project.image;
+
+            return (
+              <a className="lab-project" href={project.github} target="_blank" rel="noreferrer" key={project.title}>
+                <img src={image} alt={`${project.title} preview`} />
+                <div>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <strong>{project.title}</strong>
+                  <p>{project.tech.slice(0, 3).join(" / ")}</p>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+        <div className="lab-footer">
+          <div>
+            <span>Current focus</span>
+            <p>RAG · Cloud security · Full-stack software</p>
+          </div>
+          <div>
+            <span>Signal</span>
+            <p>Projects first, resume one click away</p>
           </div>
         </div>
       </motion.div>
@@ -389,15 +394,15 @@ function Projects() {
         copy="Seven projects across AI, cloud security, healthcare software, databases, language tools and interactive games."
       />
       <div className="mt-12 grid gap-6">
-        {projects.map((project) => (
-          <ProjectCard key={project.title} project={project} />
+        {projects.map((project, index) => (
+          <ProjectCard key={project.title} project={project} index={index} />
         ))}
       </div>
     </section>
   );
 }
 
-function ProjectCard({ project }: { project: (typeof projects)[number] }) {
+function ProjectCard({ project, index }: { project: (typeof projects)[number]; index: number }) {
   return (
     <motion.article
       whileHover={{ y: -6, rotateX: 1, rotateY: -1 }}
@@ -405,8 +410,11 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
     >
       <div className="flex h-full flex-col justify-between gap-7">
         <div>
-          <p className="text-sm font-medium uppercase tracking-[0.22em] text-sky-300">{project.label}</p>
-          <h3 className="mt-3 font-display text-3xl font-bold text-white md:text-4xl">{project.title}</h3>
+          <div className="project-kicker">
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            <p>{project.label}</p>
+          </div>
+          <h3 className="mt-4 font-display text-3xl font-bold text-white md:text-4xl">{project.title}</h3>
           <p className="mt-4 max-w-3xl leading-7 text-slate-300">{project.description}</p>
         </div>
         <div className="flex flex-wrap gap-2">

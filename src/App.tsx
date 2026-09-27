@@ -18,11 +18,14 @@ import {
 const links = {
   github: "https://github.com/suchirrrr",
   linkedin: "https://www.linkedin.com/in/suchir-ganesh-jaiganesh-95b056291/",
-  email: "mailto:suchir@example.com",
+  email: "mailto:suchirganesh18102005@gmail.com",
 };
 
 const techStack = [
   "Python",
+  "Haskell",
+  "Oracle SQL",
+  "MongoDB",
   "Java",
   "TypeScript",
   "React",
@@ -37,12 +40,57 @@ const techStack = [
 ];
 
 const heroStats = [
-  ["4", "featured builds"],
+  ["7", "featured builds"],
   ["AI + Cloud", "portfolio focus"],
   ["Monash", "computer science"],
 ];
 
 const projects = [
+  {
+    title: "CareLog",
+    label: "Patient Records & Appointment Management | FIT1056",
+    description:
+      "Led a team building a Python and Streamlit healthcare prototype, contributing across patient records, clinical notes, appointments, prescriptions and feedback workflows.",
+    tech: ["Python", "Streamlit", "JSON", "pytest", "Role-Based Access"],
+    highlights: [
+      "Contributed across the interface, application services, domain logic and JSON repositories as team lead.",
+      "Implemented separate administrator, doctor, nurse and patient workflows with authentication and access checks.",
+      "Included PBKDF2 password hashing, session expiry, audit logging and unit, functional and security edge-case tests.",
+    ],
+    github: "https://github.com/suchirrrr/carelog",
+    demo: "",
+    image: "/projects/carelog-admin-patients.png",
+  },
+  {
+    title: "BNF2Haskell",
+    label: "Grammar Parser & Code Generator | FIT2102",
+    description:
+      "Built a modular BNF grammar parser and Haskell code generator using parser combinators, algebraic data types and pure functions, extending a supplied course scaffold.",
+    tech: ["Haskell", "Parser Combinators", "TypeScript", "RxJS"],
+    highlights: [
+      "Separated grammar parsing, validation, code generation and file saving into focused modules.",
+      "Added duplicate-rule, undefined-reference and left-recursion checks, plus float, Boolean and identifier macros.",
+      "Generated data/newtype declarations and applicative parsers, with a browser interface for inspecting output.",
+    ],
+    github: "https://github.com/suchirrrr/BNF2Haskell---Grammar-Parser-and-Code-Generator",
+    demo: "",
+    image: "/projects/haskell-overview.png",
+  },
+  {
+    title: "BRM Database",
+    label: "Relational & Document Databases | FIT2094",
+    description:
+      "Developed seven Oracle SQL and MongoDB scripts modelling transport quotations, jobs, employees and vehicle servicing, from relational constraints to nested JSON documents.",
+    tech: ["Oracle SQL", "MongoDB", "JSON", "Database Design"],
+    highlights: [
+      "Defined tables and integrity constraints, populated test data and implemented transaction-based updates.",
+      "Extended the schema for service management and wrote reports using joins, aggregation and subqueries.",
+      "Exported relational customer data as nested JSON and implemented MongoDB queries and updates.",
+    ],
+    github: "https://github.com/suchirrrr/BRM-Relational-Database-and-MongoDB-Project",
+    demo: "",
+    image: "/projects/brm-overview.png",
+  },
   {
     title: "EureGuard",
     label: "AI Cloud Security & Energy Optimisation Dashboard",
@@ -161,9 +209,9 @@ const coursework = [
 ];
 
 const skillGroups = [
-  ["Languages", "Python, Java, TypeScript, SQL"],
+  ["Languages", "Python, Java, TypeScript, Haskell, SQL"],
   ["AI & Data", "RAG, embeddings, semantic search, NumPy, Pandas, forecasting, data preprocessing"],
-  ["Web & Backend", "React, FastAPI, Streamlit, SQLite, Tailwind CSS, Vite"],
+  ["Web & Backend", "React, FastAPI, Streamlit, Oracle SQL, MongoDB, SQLite, Tailwind CSS, Vite"],
   ["Concepts", "Object-Oriented Programming, Functional Programming, Data Structures, Algorithms, Databases"],
 ];
 
@@ -316,7 +364,7 @@ function Projects() {
       <SectionHeading
         eyebrow="Featured Projects"
         title="Practical systems, not just portfolio tiles."
-        copy="Four focused builds across AI, cloud security, object-oriented software design and functional reactive game development."
+        copy="Seven projects across AI, cloud security, healthcare software, databases, language tools and interactive games."
       />
       <div className="mt-12 grid gap-6">
         {projects.map((project) => (
@@ -386,7 +434,7 @@ function ProjectVisual({ project }: { project: (typeof projects)[number] }) {
 
   return (
     <div className="image-visual">
-      <img src={project.image} alt={`${project.title} screenshot`} />
+      <img src={project.image} alt={`${project.title} project visual`} />
     </div>
   );
 }
